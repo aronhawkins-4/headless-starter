@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: Gotham, sans-serif;
+        font-weight: 400;
+        color: #FFFFFF;
+    }
+    body {
+        background: #000000;
+    }
+}
+
+@font-face {
+    font-family: "Gotham";
+    font-style: normal;
+    font-weight: 900;
+    src: url("../public/fonts/Gotham-Ultra.otf")
+}
+@font-face {
+    font-family: "Gotham";
+    font-style: italic;
+    font-weight: 900;
+    src: url("../public/fonts/Gotham-UltraItalic.otf")
+}
+@font-face {
+    font-family: "Gotham";
+    font-style: normal;
+    font-weight: 800;
+    src: url("../public/fonts/Gotham-Black.otf")
+}
+@font-face {
+    font-family: "Gotham";
+    font-style: italic;
+    font-weight: 800;
+    src: url("../public/fonts/Gotham-BlackItalic.otf")
+}
+@font-face {
+    font-family: "Gotham";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../public/fonts/Gotham-Bold.otf")
+}
+@font-face {
+    font-family: "Gotham";
+    font-style: italic;
+    font-weight: 700;
+    src: url("../public/fonts/Gotham-BoldItalic.otf")
+}
+@font-face {
+    font-family: "Gotham";
+    font-style: normal;
+    font-weight: 500;
+    src: url("../public/fonts/Gotham-Medium.otf")
+}
+@font-face {
+    font-family: "Gotham";
+    font-style: italic;
+    font-weight: 500;
+    src: url("../public/fonts/Gotham-MediumItalic.otf")
+}
+@font-face {
+    font-family: "Gotham";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../public/fonts/Gotham-Book.otf")
+}
+@font-face {
+    font-family: "Gotham";
+    font-style: italic;
+    font-weight: 400;
+    src: url("../public/fonts/Gotham-BookItalic.otf")
+}
+@font-face {
+    font-family: "Gotham";
+    font-style: normal;
+    font-weight: 300;
+    src: url("../public/fonts/Gotham-Light.otf")
+}
+@font-face {
+    font-family: "Gotham";
+    font-style: italic;
+    font-weight: 300;
+    src: url("../public/fonts/Gotham-LightItalic.otf")
+}
+@font-face {
+    font-family: "Gotham";
+    font-style: normal;
+    font-weight: 200;
+    src: url("../public/fonts/Gotham-XLight.otf")
+}
+@font-face {
+    font-family: "Gotham";
+    font-style: italic;
+    font-weight: 200;
+    src: url("../public/fonts/Gotham-XLightItalic.otf")
+}
+@font-face {
+    font-family: "Gotham";
+    font-style: normal;
+    font-weight: 100;
+    src: url("../public/fonts/Gotham-Thin.otf")
+}
+@font-face {
+    font-family: "Gotham";
+    font-style: italic;
+    font-weight: 100;
+    src: url("../public/fonts/Gotham-ThinItalic.otf")
+}
