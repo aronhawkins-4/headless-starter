@@ -1,14 +1,17 @@
-import React from 'react';
-import Button from '../components/Button';
-import heroImage1 from '../../public/images/matt_filming.jpg';
-import { gql } from '@apollo/client';
-import { client } from '../lib/apollo-client';
-import CaseStudyGridItemHome from '../components/CaseStudyGridItemHome';
-import Image from 'next/image';
 
+import { gql } from '@apollo/client';
+import { myClient } from '../lib/apollo-client';
+import { ApolloClient, InMemoryCache } from '@apollo/client';
+import Image from 'next/image';
+import Link from 'next/link';
+
+import Button from '../components/Button';
+import CaseStudyGridItemHome from '../components/CaseStudyGridItemHome';
+
+import heroImage1 from '../../public/images/matt_filming.jpg';
 import hollyTyping from '../../public/images/holly_typing.jpg';
 import cameraSetup from '../../public/images/camera_setup.jpg';
-import Link from 'next/link';
+
 
 export default function Home({ posts }) {
   return (
@@ -60,18 +63,19 @@ export default function Home({ posts }) {
 
 export async function getStaticProps() {
 
-  const data = await client.query({
+  const data = await myClient.query({
     query: gql`
     query GetPostGrid {
-      posts {
+      caseStudies {
         nodes {
           id
           title
           uri
           slug
-          featuredImage {
-            node {
+          caseStudyFields {
+            featuredImage {
               sourceUrl
+              altText
             }
           }
         }
@@ -80,7 +84,7 @@ export async function getStaticProps() {
     `,
   });
 
-  const posts = data?.data.posts.nodes;
+  const posts = data?.data.caseStudies.nodes;
 
   return {
     props: {
