@@ -1,16 +1,7 @@
-import React from 'react';
-import Button from '../components/Button';
-import { gql } from '@apollo/client';
-import { client } from '../lib/apollo-client';
-import Image from 'next/image';
-import NavBar from 'src/components/NavBar';
-
-
 export default function Services() {
   return (
     <div>
        <main>
-        <NavBar />
         <section className='flex flex-col gap-8 p-24'>
           <h1 className='text-gray text-5xl'>We divide our services into two categories:</h1>
           <div className='grid grid-cols-2 gap-16'>
@@ -37,11 +28,11 @@ export default function Services() {
                 <li className='pl-4 leading-normal text-gray text-3xl font-light hover:text-white transition-color duration-100 ease-in-out relative'>Design</li>
                 <li className='pl-4 leading-normal text-gray text-3xl font-light hover:text-white transition-color duration-100 ease-in-out relative'>Drone</li>
                 <li className='pl-4 leading-normal text-gray text-3xl font-light hover:text-white transition-color duration-100 ease-in-out relative'>Livestream</li>
-                <li className='pl-4 leading-normal text-gray text-3xl font-light hover:text-white transition-color duration-100 ease-in-out relative'>Merch & Apparel</li>
+                <li className='pl-4 leading-normal text-gray text-3xl font-light hover:text-white transition-color duration-100 ease-in-out relative'>Merch &amp; Apparel</li>
                 <li className='pl-4 leading-normal text-gray text-3xl font-light hover:text-white transition-color duration-100 ease-in-out relative'>Package Design</li>
                 <li className='pl-4 leading-normal text-gray text-3xl font-light hover:text-white transition-color duration-100 ease-in-out relative'>Photo</li>
                 <li className='pl-4 leading-normal text-gray text-3xl font-light hover:text-white transition-color duration-100 ease-in-out relative'>Video</li>
-                <li className='pl-4 leading-normal text-gray text-3xl font-light hover:text-white transition-color duration-100 ease-in-out relative'>Web Design & Development</li>
+                <li className='pl-4 leading-normal text-gray text-3xl font-light hover:text-white transition-color duration-100 ease-in-out relative'>Web Design &amp; Development</li>
                 
               
               </ul>
@@ -51,35 +42,4 @@ export default function Services() {
       </main>
     </div>
   )
-}
-
-export async function getStaticProps() {
-
-  const data = await client.query({
-    query: gql`
-    query GetPostGrid {
-      posts {
-        nodes {
-          id
-          title
-          uri
-          slug
-          featuredImage {
-            node {
-              sourceUrl
-            }
-          }
-        }
-      }
-    }
-    `,
-  });
-
-  const posts = data?.data.posts.nodes;
-
-  return {
-    props: {
-      posts
-    }
-  }
 }

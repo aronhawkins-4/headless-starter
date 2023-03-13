@@ -1,17 +1,18 @@
-import React from 'react'
-import logoTitle from '../../public/images/sidekick-logo-word-red_1small.png';
-import logoMask from '../../public/images/sidekick-logo-icon-whitesmall.png';
-import Image from 'next/image';
-import Link from 'next/link';
+import logoTitle from '../../public/images/sidekick-logo-word-red_1small.png'
+// import logoMask from '../../public/images/sidekick-logo-icon-whitesmall.png'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function NavBar() {
   return (
-    <Link href='/' className='cursor-pointer'>
-      <div className='grid p-8 grid-cols-2 fixed w-full'>
-          <div className='flex justify-start align-center relative h-8 w-44 overflow-hidden'>
+    
+      <div className='grid p-8 grid-cols-2 fixed w-full z-[9999]'>
+        <Link href='/'>
+          <div className='cursor-pointer flex justify-start align-center relative h-8 w-44 overflow-hidden'>
             <Image src={logoTitle} alt='The word Sidekick' layout='fill' objectFit='contain' className='right-full'></Image>
             {/* <Image src={logoMask} alt='The word Sidekick' layout='fill' objectFit='contain' className='right-full static'></Image> */}
           </div>
+        </Link>
           <div className='toggle-wrapper flex gap-4 justify-self-end items-center'>
             <div className='hamburger-wrapper flex flex-col relative gap-2 w-6'>
               <div className='hamburger-line h-px bg-white w-full'></div>
@@ -21,6 +22,6 @@ export default function NavBar() {
           <span className='text-xl font-medium tracking-wide'>Menu</span>
           </div>
       </div>
-    </Link>
+    
   )
 }
