@@ -6,7 +6,7 @@ import Button from 'src/components/Button'
 
 
 export default function CaseStudy({post}) {
-
+  var i=0;
   return (
 
     <div>
@@ -27,9 +27,9 @@ export default function CaseStudy({post}) {
             <div className='col-span-1'>
                 <ul className='list-style-none'>
                     {
-                        post.caseStudyFields.services.map((service) => {
+                      post.caseStudyFields.services.map((service) => {
                             return (
-                                <li key={post.uri} className='text-xl'>{service}</li>
+                                <li key={i++} className='text-xl'>{service}</li>
                             )
                         })
                     }

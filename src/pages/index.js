@@ -7,7 +7,7 @@ import Link from 'next/link'
 import Button from '../components/Button'
 import CaseStudyGridItemHome from '../components/CaseStudyGridItemHome'
 
-import heroImage1 from '../../public/matt_filming.jpg'
+import heroImage1 from '../../public/images/matt_filming.jpg'
 import hollyTyping from '../../public/images/holly_typing.jpg'
 import cameraSetup from '../../public/images/camera_setup.jpg'
 
