@@ -1,5 +1,5 @@
 import logoTitle from '../../public/images/sidekick-logo-word-red_1small.png'
-// import logoMask from '../../public/images/sidekick-logo-icon-whitesmall.png'
+ import logoMask from '../../public/images/sidekick-logo-icon-whitesmall.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -8,9 +8,9 @@ export default function NavBar() {
     
       <div className='grid p-8 grid-cols-2 fixed w-full z-[9999]'>
         <Link href='/'>
-          <div className='cursor-pointer flex justify-start align-center relative h-8 w-44 overflow-hidden'>
-            <Image src={logoTitle} alt='The word Sidekick' layout='fill' objectFit='contain' className='right-full'></Image>
-            {/* <Image src={logoMask} alt='The word Sidekick' layout='fill' objectFit='contain' className='right-full static'></Image> */}
+          <div className='cursor-pointer flex justify-start align-center relative h-8 w-44 overflow-hidden group'>
+            <Image src={logoTitle} alt='The word Sidekick' layout='fill' objectFit='contain' className='right-full group-hover:translate-x-[-125%] transition-transform duration-500 ease-in-out'></Image>
+            <Image src={logoMask} alt='The word Sidekick' layout='fill' objectFit='contain' className='right-full translate-x-[125%] group-hover:translate-x-[-25%] transition-transform duration-500 ease-in-out'></Image>
           </div>
         </Link>
           <div className='toggle-wrapper flex gap-4 justify-self-end items-center'>
