@@ -11,6 +11,17 @@
     body {
         background: #000000;
     }
+    li::before {
+        content: '';
+        position: absolute;
+        top: 20px;
+        left: -16px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #989898;
+        transition: .1 ease-in-out;
+    }
 }
 
 @font-face {
